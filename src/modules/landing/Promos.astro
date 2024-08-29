@@ -1,0 +1,70 @@
+---
+import MaxWidthWrapper from "@/common/components/MaxWidthWrapper.astro";
+import LucideIcon from "@/common/icons/LucideIcon.astro";
+import { Check } from "lucide";
+
+const promociones = [
+  {
+    area: "Gimnasio",
+    precio: "$399",
+    frase: "¡Ponte en forma este verano!",
+    beneficios: ["Obercard", "Inscripción gratis", "Acceso ilimitado"],
+    imagen: "/ober-brand/gym.webp",
+  },
+  {
+    area: "Fitness Class",
+    precio: "$349",
+    frase: "Descubre tu gracia interior",
+    beneficios: ["Obercard", "Inscripción gratis", "Coaches certificados"],
+    imagen: "/ober-brand/ballet.webp",
+  },
+];
+---
+
+<div class="relative flex justify-center items-center w-full my-10 sm:my-20">
+  <MaxWidthWrapper className="w-full flex flex-col justify-center items-center">
+    <h2
+      class="text-5xl sm:text-6xl md:text-7xl lg:text-8xl font-black tracking-tighter sm:tracking-[-10px] md:tracking-[-15px] italic text-yellow-primary text-center mb-8 sm:mb-12"
+    >
+      PROMOCIONES
+    </h2>
+    <div
+      class="grid grid-cols-1 sm:grid-cols-2 gap-6 sm:gap-8 w-full mt-4 sm:mt-8"
+    >
+      {
+        promociones.map((promo) => (
+          <div class="overflow-hidden rounded-lg shadow">
+            <div class="relative">
+              <img
+                src={promo.imagen}
+                alt={`Imagen de ${promo.area}`}
+                width={400}
+                height={300}
+                class="w-full h-48 sm:h-64 object-cover"
+              />
+              <div class="absolute top-2 left-2 bg-black rounded-full px-3 py-1 text-white text-xs sm:text-sm">
+                {promo.area}
+              </div>
+            </div>
+            <div class="p-4">
+              <div class="text-xl sm:text-2xl font-bold text-primary mb-2">
+                {promo.precio} /{" "}
+                <span class="font-normal text-base sm:text-lg">
+                  {promo.frase}
+                </span>
+              </div>
+              <ul class="space-y-2">
+                {promo.beneficios.map((beneficio) => (
+                  <li class="flex items-center text-sm">
+                    <LucideIcon icon={Check} class="mr-2" />
+                    <span>{beneficio}</span>
+                  </li>
+                ))}
+              </ul>
+            </div>
+          </div>
+        ))
+      }
+    </div>
+  </MaxWidthWrapper>
+</div>
