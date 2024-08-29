@@ -1,0 +1,27 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+::-webkit-scrollbar {
+  display: none;
+}
+
+* {
+  scrollbar-width: none;
+  scrollbar-color: transparent transparent;
+}
+
+* {
+  -ms-overflow-style: none;
+  overflow: -moz-scrollbars-none;
+}
+
+:root {
+  font-family: Inter, sans-serif;
+}
+
+@supports (font-variation-settings: normal) {
+  :root {
+    font-family: InterVariable, sans-serif;
+  }
+}

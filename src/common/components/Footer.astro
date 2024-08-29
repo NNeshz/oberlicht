@@ -1,0 +1,59 @@
+---
+import { Facebook, Instagram, Phone, Mail } from "lucide";
+import LucideIcon from "@/common/icons/LucideIcon.astro";
+import MaxWidthWrapper from "./MaxWidthWrapper.astro";
+
+const currentYear = new Date().getFullYear();
+---
+
+<footer class="bg-black text-white py-10">
+  <MaxWidthWrapper>
+    <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
+      <div>
+        <img src="/ober-brand/ober-logo.webp" alt="Ober Brand" width={100} height={100} class="mb-4" />
+      </div>
+      <div>
+        <h3 class="text-xl font-semibold mb-4">Enlaces</h3>
+        <ul class="md:space-y-2">
+          <li><a href="/" class="hover:text-gray-300">Inicio</a></li>
+          <li><a href="/nosotros" class="hover:text-gray-300">Nosotros</a></li>
+          <li><a href="/servicios" class="hover:text-gray-300">Servicios</a></li>
+          <li><a href="/blog" class="hover:text-gray-300">Blog</a></li>
+          <li><a href="/contacto" class="hover:text-gray-300">Contacto</a></li>
+        </ul>
+      </div>
+      <div>
+        <h3 class="text-xl font-semibold mb-4">Contacto</h3>
+        <ul class="space-y-2">
+          <li class="flex items-center gap-2">
+            <LucideIcon icon={Phone} />
+            246 497 3099
+          </li>
+          <li class="flex items-center gap-2">
+            <LucideIcon icon={Phone} />
+            246 220 2360
+          </li>
+          <li class="flex items-center gap-2">
+            <LucideIcon icon={Mail} />
+            ventas@oberlicht.com.mx
+          </li>
+        </ul>
+      </div>
+      <div>
+        <h3 class="text-xl font-semibold mb-4">Redes Sociales</h3>
+        <ul class="flex gap-4">
+          <li>
+            <a href="https://www.facebook.com/oberlichtmx" target="_blank" rel="noopener noreferrer" class="hover:text-gray-300">
+              <LucideIcon icon={Facebook} />
+            </a>
+          </li>
+          <li>
+            <a href="https://www.instagram.com/oberlichtmx" target="_blank" rel="noopener noreferrer" class="hover:text-gray-300">
+              <LucideIcon icon={Instagram} />
+            </a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </MaxWidthWrapper>
+</footer>
