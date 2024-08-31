@@ -5,7 +5,7 @@ const [, attributes, children] = icon;
 
 const componentChildren = children
   ?.map(
-    ([shape, attributes]) =>
+    ([shape, attributes]: [any, any]) =>
       `<${shape} ${Object.entries(attributes)
         .map(([k, v]) => `${k}="${v}"`)
         .join(" ")} />`,
