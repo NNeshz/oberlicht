@@ -1,7 +1,7 @@
 ---
 import MaxWidthWrapper from "@/common/components/MaxWidthWrapper.astro";
 import LucideIcon from "@/common/icons/LucideIcon.astro";
-import { Check } from "lucide";
+import { Check, Sparkles } from "lucide";
 
 const promociones = [
   {
@@ -10,6 +10,7 @@ const promociones = [
     frase: "¡Ponte en forma este verano!",
     beneficios: ["Obercard", "Inscripción gratis", "Acceso ilimitado"],
     imagen: "/ober-brand/gym.webp",
+    color: "from-purple-500 to-pink-500",
   },
   {
     area: "Fitness Class",
@@ -17,50 +18,54 @@ const promociones = [
     frase: "Descubre tu gracia interior",
     beneficios: ["Obercard", "Inscripción gratis", "Coaches certificados"],
     imagen: "/ober-brand/ballet.webp",
+    color: "from-purple-500 to-pink-500",
   },
 ];
 ---
 
-<div class="relative flex justify-center items-center w-full my-10 sm:my-20">
-  <MaxWidthWrapper className="w-full flex flex-col justify-center items-center">
-    <h2
-      class="text-5xl sm:text-6xl md:text-7xl lg:text-8xl font-black tracking-tighter sm:tracking-[-10px] md:tracking-[-15px] italic text-yellow-primary text-center mb-8 sm:mb-12"
+<div class="py-32">
+  <MaxWidthWrapper className="relative z-10">
+    <h5
+      class="text-6xl sm:text-7xl md:text-8xl font-bold text-black text-center tracking-tighter"
     >
-      PROMOCIONES
-    </h2>
-    <div
-      class="grid grid-cols-1 sm:grid-cols-2 gap-6 sm:gap-8 w-full mt-4 sm:mt-8"
-    >
+      Nuestras Promociones
+    </h5>
+    <div class="grid gap-6 md:grid-cols-2 mt-8">
       {
-        promociones.map((promo) => (
-          <div class="overflow-hidden rounded-lg shadow">
-            <div class="relative">
-              <img
-                src={promo.imagen}
-                alt={`Imagen de ${promo.area}`}
-                width={400}
-                height={300}
-                class="w-full h-48 sm:h-64 object-cover"
-              />
-              <div class="absolute top-2 left-2 bg-black rounded-full px-3 py-1 text-white text-xs sm:text-sm">
-                {promo.area}
+        promociones.map((card, index) => (
+          <div class="relative w-full aspect-[16/9] rounded-2xl overflow-hidden group">
+            <div
+              class="absolute inset-0 bg-cover bg-center"
+              style={`background-image: url(${card.imagen})`}
+            />
+            <div
+              class={`absolute inset-0 bg-gradient-to-br ${card.color} opacity-65`}
+            />
+            <div class="absolute inset-0 flex flex-col justify-between p-6 text-white">
+              <div class="flex justify-between">
+                {card.area && (
+                  <div class="px-2 py-1 bg-black rounded-full text-xs uppercase">
+                    {card.area}
+                  </div>
+                )}
+                {card.precio && (
+                  <div class="px-2 py-1 bg-black text-yellow-primary rounded-full text-xs uppercase">
+                    {card.precio}
+                  </div>
+                )}
               </div>
-            </div>
-            <div class="p-4">
-              <div class="text-xl sm:text-2xl font-bold text-primary mb-2">
-                {promo.precio} /{" "}
-                <span class="font-normal text-base sm:text-lg">
-                  {promo.frase}
-                </span>
+
+              <div class="space-y-2">
+                <div class="text-4xl font-bold">{card.frase}</div>
+
+                <div class="flex flex-wrap gap-2">
+                  {card.beneficios.map((benefit) => (
+                    <div class="px-3 py-1 bg-black rounded-full text-sm">
+                      {benefit}
+                    </div>
+                  ))}
+                </div>
               </div>
-              <ul class="space-y-2">
-                {promo.beneficios.map((beneficio) => (
-                  <li class="flex items-center text-sm">
-                    <LucideIcon icon={Check} class="mr-2" />
-                    <span>{beneficio}</span>
-                  </li>
-                ))}
-              </ul>
             </div>
           </div>
         ))
