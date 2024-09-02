@@ -2,12 +2,12 @@
 import MaxWidthWrapper from "@/common/components/MaxWidthWrapper.astro";
 ---
 
-<div class="relative flex justify-center items-center min-h-screen w-full">
-  <div
-    class="absolute inset-0 bg-cover bg-center filter grayscale w-full"
-    style="background-image: url('/ober-brand/bg-home.webp');"
-  >
-  </div>
+<section class="relative flex justify-center items-center min-h-screen w-full overflow-hidden">
+  <img
+    class="absolute inset-0 h-full w-full object-cover object-center filter grayscale"
+    alt="Background image"
+    src="/ober-brand/bg-home.webp"
+  />
   <div class="absolute inset-0 bg-white bg-opacity-90"></div>
   <MaxWidthWrapper
     className="relative z-10 flex flex-col w-full min-h-screen justify-center items-center px-4 sm:px-6 lg:px-8"
@@ -35,4 +35,4 @@ import MaxWidthWrapper from "@/common/components/MaxWidthWrapper.astro";
       </button>
     </a>
   </MaxWidthWrapper>
-</div>
+</section>
