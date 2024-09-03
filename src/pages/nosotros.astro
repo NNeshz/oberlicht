@@ -1,0 +1,20 @@
+---
+import GeneralBadge from "@/common/components/GeneralBadge.astro";
+import Layout from "@/layouts/Layout.astro";
+import Header from "@/modules/nosotros/Header.astro";
+import History from "@/modules/nosotros/History.astro";
+import JoinUs from "@/modules/nosotros/JoinUs.astro";
+import Mision from "@/modules/nosotros/Mision.astro";
+import Vision from "@/modules/nosotros/Vision.astro";
+---
+
+<Layout title="Nosotros">
+    <Header />
+    <History />
+    <Mision />
+    <Vision />
+    <GeneralBadge className="bg-yellow-primary" >
+        Únete a nosotros y forma parte de la familia Oberlicht.
+    </GeneralBadge>
+    <JoinUs />
+</Layout>
