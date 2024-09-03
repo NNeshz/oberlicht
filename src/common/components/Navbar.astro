@@ -1,5 +1,6 @@
 ---
 import MaxWidthWrapper from "./MaxWidthWrapper.astro";
+import { Image } from "astro:assets";
 ---
 
 <div class="fixed top-4 inset-x-0 z-50">
@@ -18,7 +19,7 @@ import MaxWidthWrapper from "./MaxWidthWrapper.astro";
               href="/"
               title="Página de inicio"
             >
-              <img
+              <Image
                 src={"/ober-brand/ober-logo.webp"}
                 alt="Oberlicht México"
                 width={100}
