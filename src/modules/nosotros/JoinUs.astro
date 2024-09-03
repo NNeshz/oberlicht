@@ -1,0 +1,32 @@
+---
+import LucideIcon from "@/common/icons/LucideIcon.astro";
+import { Mail, MapPin, Phone } from "lucide";
+---
+
+<section class="w-full py-12 md:py-24 lg:py-32 bg-gray-100">
+    <div class="container px-4 md:px-6">
+      <div class="grid gap-6 lg:grid-cols-2">
+        <div class="space-y-4">
+          <h2 class="text-3xl font-bold tracking-tighter sm:text-4xl md:text-5xl">Contáctanos</h2>
+          <p class="text-gray-500 dark:text-gray-400">
+            Estamos aquí para ayudarte. Envíanos un mensaje y nos pondremos en contacto contigo lo antes posible.
+          </p>
+          <div class="space-y-2">
+            <div class="flex items-center">
+              <LucideIcon icon={MapPin} class="w-5 h-5 mr-2 text-gray-500" />
+              <span>123 Calle Principal, Ciudad, País</span>
+            </div>
+            <div class="flex items-center">
+                <LucideIcon icon={Phone} class="w-5 h-5 mr-2 text-gray-500" />
+                <span>+1 234 567 890</span>
+            </div>
+            <div class="flex items-center">
+                <LucideIcon icon={Mail} class="w-5 h-5 mr-2 text-gray-500" />
+              <span>info@tuempresa.com</span>
+            </div>
+          </div>
+        </div>
+        
+      </div>
+    </div>
+  </section>

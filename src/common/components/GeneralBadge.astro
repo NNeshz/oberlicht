@@ -1,0 +1,16 @@
+---
+import { cn } from "@/lib/utils"
+import MaxWidhtWrapper from "@/common/components/MaxWidthWrapper.astro"
+
+interface GeneralBadgeProps {
+  className?: string;
+}
+
+const { className }: GeneralBadgeProps = Astro.props
+---
+
+<div class={cn("flex justify-center py-16 items-center w-full", className)}>
+    <MaxWidhtWrapper className="flex justify-center items-center text-6xl sm:text-7xl md:text-8xl font-bold text-black text-center tracking-tighter">
+        <slot />
+    </MaxWidhtWrapper>
+</div>
