@@ -1,0 +1,57 @@
+---
+import MaxWidthWrapper from "@/common/components/MaxWidthWrapper.astro";
+
+const benefits = [
+  "Baby Ballet",
+  "Clásico",
+  "Infantil",
+  "Presentaciones",
+  "Juvenil",
+];
+---
+
+<section class="py-16">
+  <MaxWidthWrapper class="relative">
+    <div
+      class="relative h-[33vh] w-full overflow-hidden flex items-center justify-center"
+    >
+      <img
+        src="/ober-brand/ballet2.webp"
+        class="absolute inset-0 object-cover object-center z-0 w-full h-full rounded-xl"
+      />
+      <h4 class="text-white text-center text-7xl font-bold relative z-10">
+        Ballet
+      </h4>
+    </div>
+
+    <section class="flex flex-col justify-center items-center space-y-12 py-8">
+      <div
+        class="grid grid-cols-1 lg:grid-cols-3 gap-4 justify-center items-center"
+      >
+        <p
+          class="text-3xl sm:text-4xl md:text-5xl font-bold text-black tracking-tighter col-span-2"
+        >
+          Descubre el mundo del ballet con nuestros programas especializados
+        </p>
+        <p
+          class="text-base sm:text-2xl md:text-3xl text-black/50 text-left lg:text-right tracking-tighter"
+        >
+          Aquí es donde se mezclan ejercicios técnicos, desarrollando todo tipo
+          de actividades, ejercicios y actuaciones artísticas que les lleve a
+          alcanzar su máximo nivel y disfrutarlo
+        </p>
+      </div>
+      <section class="flex flex-wrap items-center justify-center gap-2">
+        {
+          benefits.map((service) => (
+            <div class="border-2 border-black rounded-full px-3 py-1 hover:bg-black hover:text-white transition-all duration-300 select-none">
+              <p class="text-base font-semibold text-center tracking-tighter">
+                {service}
+              </p>
+            </div>
+          ))
+        }
+      </section>
+    </section>
+  </MaxWidthWrapper>
+</section>
