@@ -5,7 +5,7 @@ const promociones = [
   {
     area: "Gimnasio",
     precio: "$399",
-    frase: "¡Ponte en forma este verano!",
+    frase: "Ponte en forma este verano",
     beneficios: ["Obercard", "Inscripción gratis", "Acceso ilimitado"],
     imagen: "gym.webp",
     color: "from-purple-primary via-blue-primary to-yellow-primary",
@@ -34,10 +34,10 @@ const promociones = [
           <article class="relative w-full aspect-[4/3] rounded-2xl overflow-hidden group">
             <figure>
               <img
-  class="absolute inset-0 h-full w-full object-cover object-center group-hover:scale-105 transition-all duration-300"
-  src={`/ober-brand/${card.imagen}`}
-  alt="Brand image"
-/>
+                class="absolute inset-0 h-full w-full object-cover object-center group-hover:scale-105 transition-all duration-300"
+                src={`/ober-brand/${card.imagen}`}
+                alt="Brand image"
+              />
             </figure>
             <div
               class={`absolute inset-0 bg-gradient-to-br ${card.color} opacity-50`}

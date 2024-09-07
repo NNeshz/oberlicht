@@ -1,24 +1,6 @@
 ---
 import MaxWidthWrapper from "@/common/components/MaxWidthWrapper.astro";
 
-const services = [
-  {
-    title: "Oberfit",
-    description: "Entrenamiento personalizado con coachs certificados",
-    image: "/ober-brand/gym.webp",
-  },
-  {
-    title: "Natación",
-    description: "Clases de natación para todas las edades y niveles",
-    image: "/ober-brand/natacion.webp",
-  },
-  {
-    title: "Ballet",
-    description: "Expresiones artísticas y corporales, mejorando día a día",
-    image: "/ober-brand/ballet.webp",
-  },
-];
-
 const otherServices = [
   "Nutrición",
   "Terapia Fisica",
@@ -39,64 +21,84 @@ const otherServices = [
     </h2>
 
     <section class="grid gap-4 my-10 md:grid-cols-2 lg:grid-cols-3">
-          <article class="relative aspect-[4/3] rounded-md overflow-hidden group">
-            <div class="absolute inset-0 transition-all duration-300">
-              <figure>
-                <img
-                  src={"/ober-brand/gym.webp"}
-                  alt={"Oberfit"}
-                  class="absolute inset-0 w-full h-full object-cover grayscale object-center group-hover:scale-105 group-hover:grayscale-0 transition-all duration-300"
-                />
-              </figure>
-            </div>
-            <section class="relative z-10 h-full flex items-center justify-center text-center text-white bg-black bg-opacity-50">
-              <article class="space-y-4 p-8 text select-none">
-                <p class="text-4xl font-bold tracking-tighter sm:text-5xl md:text-6xl">
-                  {"Oberfit"}
-                </p>
-                <p class="text-lg md:text-xl">Entrenamiento personalizado con coachs certificados</p>
-              </article>
-            </section>
+      <article class="relative aspect-[4/3] rounded-md overflow-hidden group">
+        <div class="absolute inset-0 transition-all duration-300">
+          <figure>
+            <img
+              src={"/ober-brand/gym.webp"}
+              alt={"Oberfit"}
+              class="absolute inset-0 w-full h-full object-cover grayscale object-center group-hover:scale-105 group-hover:grayscale-0 transition-all duration-300"
+            />
+          </figure>
+        </div>
+        <section
+          class="relative z-10 h-full flex items-center justify-center text-center text-white bg-black bg-opacity-50"
+        >
+          <article class="space-y-4 p-8 text select-none">
+            <p
+              class="text-4xl font-bold tracking-tighter sm:text-5xl md:text-6xl"
+            >
+              {"Oberfit"}
+            </p>
+            <p class="text-lg md:text-xl">
+              Entrenamiento personalizado con coachs certificados
+            </p>
           </article>
+        </section>
+      </article>
 
-          <article class="relative aspect-[4/3] rounded-md overflow-hidden group">
-            <div class="absolute inset-0 transition-all duration-300">
-              <figure>
-                <img
-                  src={"/ober-brand/natacion.webp"}
-                  alt={"Natación"}
-                  class="absolute inset-0 w-full h-full object-cover grayscale object-center group-hover:scale-105 group-hover:grayscale-0 transition-all duration-300"
-                />
-              </figure>
-            </div>
-            <section class="relative z-10 h-full flex items-center justify-center text-center text-white bg-black bg-opacity-50">
-              <article class="space-y-4 p-8 text select-none">
-                <p class="text-4xl font-bold tracking-tighter sm:text-5xl md:text-6xl">
-                  {"Natación"}
-                </p>
-                <p class="text-lg md:text-xl">Clases de natacion para todas las edades y niveles</p>
-              </article>
-            </section>
+      <article class="relative aspect-[4/3] rounded-md overflow-hidden group">
+        <div class="absolute inset-0 transition-all duration-300">
+          <figure>
+            <img
+              src={"/ober-brand/natacion.webp"}
+              alt={"Natación"}
+              class="absolute inset-0 w-full h-full object-cover grayscale object-center group-hover:scale-105 group-hover:grayscale-0 transition-all duration-300"
+            />
+          </figure>
+        </div>
+        <section
+          class="relative z-10 h-full flex items-center justify-center text-center text-white bg-black bg-opacity-50"
+        >
+          <article class="space-y-4 p-8 text select-none">
+            <p
+              class="text-4xl font-bold tracking-tighter sm:text-5xl md:text-6xl"
+            >
+              {"Natación"}
+            </p>
+            <p class="text-lg md:text-xl">
+              Clases de natacion para todas las edades y niveles
+            </p>
           </article>
-          <article class="relative aspect-[4/3] rounded-md overflow-hidden group md:col-span-2 lg:col-span-1">
-            <div class="absolute inset-0 transition-all duration-300">
-              <figure>
-                <img
-                  src={"/ober-brand/ballet.webp"}
-                  alt={"Ballet"}
-                  class="absolute inset-0 w-full h-full object-cover grayscale object-center group-hover:scale-105 group-hover:grayscale-0 transition-all duration-300"
-                />
-              </figure>
-            </div>
-            <section class="relative z-10 h-full flex items-center justify-center text-center text-white bg-black bg-opacity-50">
-              <article class="space-y-4 p-8 text select-none">
-                <p class="text-4xl font-bold tracking-tighter sm:text-5xl md:text-6xl">
-                  {"Ballet"}
-                </p>
-                <p class="text-lg md:text-xl">Expresiones artísticas y corporales, mejorando día a día</p>
-              </article>
-            </section>
+        </section>
+      </article>
+      <article
+        class="relative aspect-[4/3] rounded-md overflow-hidden group md:col-span-2 lg:col-span-1"
+      >
+        <div class="absolute inset-0 transition-all duration-300">
+          <figure>
+            <img
+              src={"/ober-brand/ballet.webp"}
+              alt={"Ballet"}
+              class="absolute inset-0 w-full h-full object-cover grayscale object-center group-hover:scale-105 group-hover:grayscale-0 transition-all duration-300"
+            />
+          </figure>
+        </div>
+        <section
+          class="relative z-10 h-full flex items-center justify-center text-center text-white bg-black bg-opacity-50"
+        >
+          <article class="space-y-4 p-8 text select-none">
+            <p
+              class="text-4xl font-bold tracking-tighter sm:text-5xl md:text-6xl"
+            >
+              {"Ballet"}
+            </p>
+            <p class="text-lg md:text-xl">
+              Expresiones artísticas y corporales, mejorando día a día
+            </p>
           </article>
+        </section>
+      </article>
     </section>
 
     <h3
@@ -108,10 +110,8 @@ const otherServices = [
     <section class="flex flex-wrap items-center justify-center gap-4 mt-4">
       {
         otherServices.map((service) => (
-          <div class="border-2 border-black rounded-full px-3 py-1 hover:bg-black hover:text-white transition-all duration-300 select-none">
-            <p class="text-xl font-semibold text-center tracking-tighter">
-              {service}
-            </p>
+          <div class="bg-black/5 px-3 py-1 rounded-full hover:bg-black/10 transition-all duration-300 select-none">
+            <p class="text-xl text-center tracking-tighter">{service}</p>
           </div>
         ))
       }

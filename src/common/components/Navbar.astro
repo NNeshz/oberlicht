@@ -19,12 +19,15 @@ import { Image } from "astro:assets";
               href="/"
               title="Página de inicio"
             >
-              <Image
-                src={"/ober-brand/ober-logo.webp"}
-                alt="Oberlicht México"
-                width={100}
-                height={100}
-              />
+              <div class="h-[50px] flex items-center justify-center">
+                <Image
+                  src={"/ober-brand/ober-logo.webp"}
+                  alt="Oberlicht México"
+                  width={100}
+                  height={100}
+                  class="object-contain"
+                />
+              </div>
             </a>
             <button
               @click="open = !open"

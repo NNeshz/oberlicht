@@ -5,9 +5,9 @@ const benefits = [
   "Aquafitness",
   "Terapia Aquática",
   "Adultos en plenitud",
-  "Rehabilitación en grupo",
   "Adultos",
   "Colegios",
+  "Rehabilitación en grupo",
 ];
 ---
 
@@ -45,10 +45,8 @@ const benefits = [
       <section class="flex flex-wrap items-center justify-center gap-2">
         {
           benefits.map((service) => (
-            <div class="border-2 border-black rounded-full px-3 py-1 hover:bg-black hover:text-white transition-all duration-300 select-none">
-              <p class="text-base font-semibold text-center tracking-tighter">
-                {service}
-              </p>
+            <div class="bg-black/5 px-3 py-1 rounded-full hover:bg-black/10 transition-all duration-300 select-none">
+              <p class="text-xl text-center tracking-tighter">{service}</p>
             </div>
           ))
         }
