@@ -16,6 +16,7 @@ module.exports = {
         "yellow-primary": "#ffdd00",
         "purple-primary": "#842a80",
         "blue-primary": "#009eff",
+        "black-oberlicht": "#131313",
 
         border: "hsl(var(--border))",
         input: "hsl(var(--input))",

@@ -21,10 +21,10 @@ const promociones = [
 ];
 ---
 
-<section class="py-32">
+<section class="py-16">
   <MaxWidthWrapper className="relative z-10">
     <h2
-      class="text-6xl sm:text-7xl md:text-8xl font-bold text-black text-center tracking-tighter"
+      class="text-6xl sm:text-7xl md:text-8xl font-bold text-black-oberlicht text-center tracking-tighter"
     >
       Nuestras Promociones
     </h2>
@@ -45,12 +45,12 @@ const promociones = [
             <section class="absolute inset-0 flex flex-col justify-between p-6 text-white">
               <section class="flex justify-between">
                 {card.area && (
-                  <p class="px-2 py-1 bg-black rounded-full text-xs uppercase">
+                  <p class="px-2 py-1 bg-black-oberlicht rounded-full text-xs uppercase">
                     {card.area}
                   </p>
                 )}
                 {card.precio && (
-                  <p class="px-2 py-1 bg-black text-yellow-primary rounded-full text-xs uppercase">
+                  <p class="px-2 py-1 bg-black-oberlicht text-yellow-primary rounded-full text-xs uppercase">
                     {card.precio}
                   </p>
                 )}
@@ -61,7 +61,7 @@ const promociones = [
 
                 <ul class="flex flex-wrap gap-2">
                   {card.beneficios.map((benefit) => (
-                    <li class="px-3 py-1 bg-black rounded-full text-sm">
+                    <li class="px-3 py-1 bg-black-oberlicht rounded-full text-sm">
                       {benefit}
                     </li>
                   ))}
